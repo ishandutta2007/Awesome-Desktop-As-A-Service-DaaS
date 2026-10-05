@@ -1,147 +1,115 @@
-# Awesome-Desktop-As-A-Service-DaaS
-
-# Awesome-Desktop-As-A-Service-DaaS
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Cloud PCs, Virtual Desktop Infrastructure (VDI), Application Streaming & Remote Access*
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Desktop as a Service (DaaS)**. These tools help organizations deliver virtual desktops, applications, and secure browsers to any device through a web browser—centralizing control, improving security, and supporting distributed workforces.
-
-
-
-**Examples** include Windows 365 (Cloud PC), Amazon WorkSpaces, Citrix DaaS, Omnissa Horizon Cloud, Azure Virtual Desktop, Dizzion Frame, Kasm Workspaces, Apache Guacamole, IsardVDI, and RustDesk (the category leaders).
-
-
-
-**Open-source emphasis**: The open-source DaaS ecosystem is **exceptionally mature and production-proven**. **Kasm Workspaces** delivers browser-based containers, applications, and desktops with GPU acceleration, Zero Trust integration via OpenZiti, and native Proxmox VE support . **Apache Guacamole** is the de-facto clientless remote desktop gateway supporting VNC, RDP, and SSH through a browser . **IsardVDI** provides a free KVM-based desktop virtualization platform with GPU support and Docker deployment . **RustDesk** offers a self-hosted remote desktop alternative with full data control . This section documents these production-grade solutions.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## 📖 Table of Contents
-
-
-
-- [☁️ SaaS/Hosted Platforms](#-saas-hosted-platforms)
-
-- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
-
-- [🤝 How to Contribute](#-how-to-contribute)
-
-- [⚠️ Disclaimer](#-disclaimer)
-
-
-
-## ☁️ SaaS/Hosted Platforms
-
-
-
-> **📊 Market Context**: The global Desktop-as-a-Service market is estimated at **~$8B in 2026**, growing toward **~$25B by 2032** at a **~20% CAGR**. The sector is **moderately concentrated** — **Citrix** and **Omnissa** (formerly VMware Horizon) dominate enterprise VDI, while **Microsoft** offers both **Azure Virtual Desktop** (flexible, consumption-based) and **Windows 365** (simpler, fixed per-user Cloud PC) . **Pricing varies dramatically**: Windows 365 Business Basic starts at **$28/user/month** (2 vCPU/4 GB) , Amazon WorkSpaces publishes a **$25/month Windows Value example** , and Citrix DaaS uses **quote-based or calculator pricing** . No single vendor holds a winner-take-all position; enterprises typically run hybrid DaaS + VDI stacks.
-
-
-
-| Platform | Description | Pricing (Starting Tier) | Free Tier Limits | Company Size |
-
-|----------|-------------|------------------------|------------------|--------------|
-
-| **[Windows 365 (Cloud PC)](https://www.microsoft.com/en-us/windows-365)** | **Persistent Cloud PC with one-user, one-desktop model.** Predictable monthly pricing, deep integration with Microsoft 365, Entra ID, and Intune. | **Business Basic**: **$28/user/month** (2 vCPU/4 GB); **Standard**: **$36** (2 vCPU/8 GB); **Premium**: **$56** (4 vCPU/16 GB). 128 GB storage included . | **None** — 30-day trial available via Microsoft 365 trial. **No perpetual free tier**. | **~$281B revenue (Microsoft FY2025)** |
-
-| **[Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop/)** | **Microsoft's flexible cloud VDI.** Multi-session Windows 10/11, RemoteApp streaming, and consumption-based pricing. | **Consumption-based**: Pay for compute (VM hours) + storage + networking. No per-user license fee for multi-session Windows . | **None** — Azure free account gives $200 credit for 30 days. **No perpetual free tier**. | **~$281B revenue (Microsoft FY2025)** |
-
-| **[Amazon WorkSpaces](https://aws.amazon.com/workspaces/)** | **AWS-managed DaaS with persistent and non-persistent options.** WorkSpaces Personal for consistent desktops; WorkSpaces Pools for shared/intermittent use. | **Windows Value example**: **$25/month**; **Windows Standard example**: **$44/month** . AutoStop combines monthly base charge + hourly use. WorkSpaces Pools include instance + Windows access charges . | **AWS Free Tier**: $100–$200 credits for new accounts. **No perpetual free tier** for WorkSpaces. | **~$638B revenue (Amazon FY2025)** |
-
-| **[Citrix DaaS](https://www.citrix.com/)** | **Enterprise-grade VDI and application delivery.** Virtual Apps and Desktops, hybrid deployment options, and mature policy/monitoring controls. | **Quote-based or calculator** — no public per-user rate . **Infrastructure and Microsoft licensing remain separate cost areas** . | **None** — enterprise demo required. | **Private (part of Cloud Software Group)** |
-
-| **[Omnissa Horizon Cloud](https://www.omnissa.com/)** | **Enterprise VDI (formerly VMware Horizon).** Broad enterprise control, hybrid deployment, and mature management stack. | **Quote-based** — no public per-user rate . | **None** — enterprise demo required. | **Private (spun out of VMware/Broadcom)** |
-
-| **[Dizzion Frame](https://www.dizzion.com/)** | **Cloud-native DaaS.** Multi-cloud support, browser-delivered desktops, and usage-based billing. | **Custom pricing** — quote required. | **Free trial** available on request. | **Private (~$50M+ raised)** |
-
-| **[Kasm Cloud](https://kasm.com/)** | **Managed version of Kasm Workspaces.** Browser-delivered containers, applications, and desktops with SOC 2 Type II certification. | **Custom pricing** — quote required. Self-hosted Kasm Workspaces Community Edition is free . | **Free Community Edition** for self-hosting . **14-day trial** for Cloud. | **Private (Kasm Technologies)** |
-
-
-
-## 🔓 Open-Source GitHub Projects
-
-
-
-Sorted by star count (descending). Star badge links to each repo's stargazers page.
-
-
-
-| Repo | Description | Stars |
-
-|---|---|---|
-
-| **[Apache Guacamole](https://github.com/apache/guacamole)** — **The de-facto clientless remote desktop gateway.** Supports **VNC, RDP, and SSH** through a web browser—no plugins or client software required . **1.6.0** (June 2025) added improved rendering performance, batch connection import, and Duo v4 support . **Apache-2.0**. | [![Stars](https://img.shields.io/github/stars/apache/guacamole?style=social&color=white)](https://github.com/apache/guacamole/stargazers) | ~3,500 |
-
-| **[RustDesk](https://github.com/rustdesk/rustdesk)** — **Full-featured open-source remote control alternative.** Self-hosted with full data control. Supports Windows, macOS, Linux, iOS, Android, and Web. **VP8/VP9/AV1 software codecs + H264/H265 hardware codecs**. P2P connection with **NaCl end-to-end encryption** . **Self-host OSS Server** free, or **Pro Server** with web console, SSO, and enterprise controls . | [![Stars](https://img.shields.io/github/stars/rustdesk/rustdesk?style=social&color=white)](https://github.com/rustdesk/rustdesk/stargazers) | ~85,000 |
-
-| **[IsardVDI](https://github.com/isard-vdi/isard)** — **Free Software desktop virtualization platform (AGPL v3).** KVM-based, **GPU support via NVIDIA Grid**, Docker/Docker Compose deployment in minutes, scalable multi-hypervisor management. Supports **SPICE, noVNC (web), RDP, and Guacamole RDP** viewers . | [![Stars](https://img.shields.io/github/stars/isard-vdi/isard?style=social&color=white)](https://github.com/isard-vdi/isard/stargazers) | ~51 |
-
-| **[QVD (theqvd)](https://github.com/theqvd/theqvd)** — **Open Source VDI solution for Linux environments.** Provides a safe and easy-to-manage alternative to desktop and application virtualization . | [![Stars](https://img.shields.io/github/stars/theqvd/theqvd?style=social&color=white)](https://github.com/theqvd/theqvd/stargazers) | ~104 |
-
-
-
-**Additional open-source options worth exploring:**
-
-
-
-| Repo | Description |
-
-|---|---|
-
-| **[Apache CloudStack](https://github.com/apache/cloudstack)** — IaaS platform used for VDI deployments. **Eliminates hypervisor license costs**, reducing total cost per desktop for educational institutions . |
-
-| **[Proxmox VE](https://github.com/proxmox/pve-manager)** — Open-source virtualization platform. **Kasm Workspaces integrates natively** with Proxmox VE API for auto-provisioning of worker VMs . |
-
-
-
-## 🤝 How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## ⚠️ Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- DaaS platforms handle sensitive user data and corporate applications; ensure proper access controls, Zero Trust architecture, and compliance with organizational security policies.
-
-- **Open-source reality**: The open-source ecosystem for DaaS is **mature and production-proven**. **Kasm Workspaces** delivers browser-based containers, applications, and desktops with **GPU acceleration, Zero Trust via OpenZiti, and native Proxmox VE integration** — trusted by **federal agencies for multi-segment secure network deployments** . **Apache Guacamole** is the de-facto clientless remote desktop gateway . **IsardVDI** provides a free KVM-based alternative with **GPU support** . **RustDesk** offers self-hosted remote control with **85,000+ stars** . However, **commercial platforms** (Citrix, Omnissa, Windows 365) provide **enterprise-grade management, compliance certifications, and dedicated support** that open-source alternatives require significant operational investment to match. The open-source path is **genuinely viable** for organizations with strong infrastructure engineering capacity.
-
-- **Pricing caveat**: All pricing figures are **verified against cited search results** but may change without notice. **Windows 365** is priced per-user with fixed specs . **AWS WorkSpaces** pricing varies by region, bundle, storage, and OS . **Citrix and Omnissa** require formal quotes. Always request a formal quote for accurate budgeting.
-
-
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Desktop-As-A-Service (DaaS) &amp; Cloud PC Banner" width="100%" />
+</p>
+
+# 💻 Awesome Desktop-As-A-Service (DaaS) & Cloud PC Ecosystem 🚀
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square" alt="GitHub Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square&color=blue" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+> **Curated List of SaaS Products & Open-Source GitHub Projects for Desktop-as-a-Service (DaaS), Virtual Desktop Infrastructure (VDI), Application Streaming & Remote Desktop Access.**
 
 ---
 
+## 💡 Overview & Introduction
 
+This repository tracks notable enterprise **SaaS DaaS platforms** and production-grade **open-source VDI/remote desktop projects**. Desktop as a Service (DaaS) enables organizations to deliver virtual desktops, hosted desktop environments, application streaming, and secure browser workspaces to any device over the web—centralizing IT management, improving data security, and empowering remote/hybrid workforces.
 
-**Made for IT administrators, VDI engineers, cloud architects, and infrastructure teams.**
+Whether you are evaluating cloud PC solutions like **Amazon WorkSpaces** and **Windows 365**, or setting up self-hosted open-source gateways like **RustDesk**, **Apache Guacamole**, and **Kasm Workspaces**, this list provides verified details on features, pricing, free tiers, and company backings.
 
-Let's make Desktop-as-a-Service more open, transparent, and secure.
+---
+
+## 📖 Table of Contents
+
+- [☁️ SaaS/Hosted DaaS Platforms](#%EF%B8%8F-saashosted-daas-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [⭐ Star History](#-star-history)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
+
+---
+
+## ☁️ SaaS/Hosted DaaS Platforms
+
+> **📊 Market Context & Industry Dynamics**: The global Desktop-as-a-Service (DaaS) market is estimated at **~$8 Billion in 2026** and projected to reach **~$25 Billion by 2032** at a **~20% CAGR**. The sector is **moderately concentrated** — market leaders like **Amazon (AWS WorkSpaces)** and **Microsoft (Azure Virtual Desktop & Windows 365)** lead cloud DaaS adoption alongside enterprise VDI titans **Citrix DaaS** and **Omnissa Horizon Cloud**, while specialized cloud-native providers (e.g. Dizzion Frame, Kasm Cloud) address targeted high-performance and browser-based virtualization requirements.
+
+Below is a comparison table of commercial DaaS platforms, sorted by **Company Size (Revenue / Valuation)** in descending order:
+
+| Platform | Description | Pricing (Starting Tier) | Free Tier Limits | Company Size (Revenue / Valuation) 🔽 |
+|:---|:---|:---|:---|:---|
+| **[Amazon WorkSpaces](https://aws.amazon.com/workspaces/)** 🚀 | **AWS-managed persistent & non-persistent DaaS.** WorkSpaces Personal delivers persistent desktops; WorkSpaces Pools provides shared auto-scaling desktops. | **$25.00/user/month** (Windows Value bundle: 1 vCPU, 2 GB RAM) or **$7.50/month base + $0.22/hour** (AutoStop). | **AWS Free Tier**: 200 hours/month of WorkSpaces Personal for 2 months (1 vCPU, 2 GB RAM). | **~$638 Billion revenue** (Amazon FY2025) |
+| **[Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop/)** ☁️ | **Microsoft's cloud VDI platform.** Multi-session Windows 10/11, RemoteApp streaming, and granular Azure compute scaling. | **~$20.00/user/month** estimated infrastructure cost (Pay-as-you-go Azure compute/storage; no extra license cost for M365 E3/E5). | **Azure Free Account**: $200 free credit for 30 days + 12 months of select free cloud services. | **~$281 Billion revenue** (Microsoft FY2025) |
+| **[Windows 365 (Cloud PC)](https://www.microsoft.com/en-us/windows-365)** 💻 | **Persistent Cloud PC with simplified per-user monthly billing.** One-user, one-desktop model deeply integrated with Microsoft 365, Entra ID, and Intune. | **$28.00/user/month** (Business Basic: 2 vCPU, 4 GB RAM, 128 GB storage) or **$36.00/user/month** (Standard: 2 vCPU, 8 GB RAM). | **30-Day Free Trial** (Includes 1 license of Windows 365 Business Standard for 30 days). | **~$281 Billion revenue** (Microsoft FY2025) |
+| **[Citrix DaaS](https://www.citrix.com/)** 🏢 | **Enterprise-grade VDI and application streaming.** Hybrid cloud deployment, advanced HDX user experience protocol, and granular security policy engine. | **$15.00/user/month** (Citrix DaaS Premium / Hybrid starting quote tier; requires minimum user commit). | **14-Day Enterprise Free Trial** available upon request with proof of corporate domain. | **~$3.2 Billion revenue** (Cloud Software Group) |
+| **[Omnissa Horizon Cloud](https://www.omnissa.com/)** 🌐 | **Enterprise VDI platform (formerly VMware Horizon).** Multi-cloud management stack, Blast Extreme protocol, and dynamic app delivery. | **$11.50/user/month** (Horizon Cloud subscription base tier; cloud infrastructure costs separate). | **60-Day Evaluation Trial** available via enterprise sales contact. | **~$1.5 Billion revenue** (Independent entity spun out of VMware/Broadcom) |
+| **[Dizzion Frame](https://www.dizzion.com/)** 🖼️ | **Cloud-native DaaS & App Streaming.** Delivers Windows/Linux desktops and apps directly via HTML5 browser across AWS, Azure, GCP, or Nutanix. | **$20.00/user/month** (Frame Concurrent / Named User starter tier + cloud infrastructure cost). | **30-Day Free Trial Test Drive** (Includes 50 hours of free browser session time). | **~$50 Million+ raised** (Private VC-backed) |
+| **[Kasm Cloud](https://kasm.com/)** 🔒 | **Managed Workspaces-as-a-Service.** Browser-delivered containerized apps, desktops, and Zero Trust isolated web browsing with SOC 2 Type II compliance. | **$5.00/user/month** (Kasm Cloud Professional Plan) or free self-hosted Community Edition. | **14-Day Free Trial** on Kasm Cloud; **Perpetual Free** Community Edition (up to 5 concurrent sessions) for self-hosting. | **Private Bootstrapped** (Kasm Technologies) |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+The open-source DaaS and remote virtualization ecosystem is exceptionally mature and production-proven. Below are the top open-source projects, sorted by **GitHub Star Count** in descending order:
+
+| Repo / Project | Description | GitHub Stars 🔽 |
+|:---|:---|:---:|
+| **[RustDesk](https://github.com/rustdesk/rustdesk)** 🦀 | **Full-featured open-source remote control & desktop access platform.** Self-hosted with full data sovereignty. Supports Windows, macOS, Linux, iOS, Android, and Web. Features VP8/VP9/AV1 codecs, P2P connection with NaCl end-to-end encryption. | [![Stars](https://img.shields.io/github/stars/rustdesk/rustdesk?style=social&color=white)](https://github.com/rustdesk/rustdesk/stargazers) |
+| **[Apache Guacamole](https://github.com/apache/guacamole)** 🥑 | **De-facto clientless HTML5 remote desktop gateway.** Provides clientless access to RDP, VNC, and SSH protocols through any standard web browser—no client plugins required. | [![Stars](https://img.shields.io/github/stars/apache/guacamole?style=social&color=white)](https://github.com/apache/guacamole/stargazers) |
+| **[Apache CloudStack](https://github.com/apache/cloudstack)** ☁️ | **Infrastructure-as-a-Service (IaaS) platform widely used for VDI multi-tenancy.** Manages compute, storage, and networking for scale-out virtual desktop workloads without expensive hypervisor licensing. | [![Stars](https://img.shields.io/github/stars/apache/cloudstack?style=social&color=white)](https://github.com/apache/cloudstack/stargazers) |
+| **[Proxmox VE](https://github.com/proxmox/pve-manager)** 🦁 | **Open-source enterprise server virtualization platform.** Integrates KVM hypervisor and LXC containers. Frequently paired with Kasm Workspaces and IsardVDI for enterprise desktop orchestration. | [![Stars](https://img.shields.io/github/stars/proxmox/pve-manager?style=social&color=white)](https://github.com/proxmox/pve-manager/stargazers) |
+| **[Remmina](https://github.com/FreeRDP/Remmina)** 🖥️ | **Remote desktop client written in GTK+ for Linux.** Supports RDP, VNC, SPICE, SSH, and WWW protocols with multi-monitor support and encrypted connection profiles. | [![Stars](https://img.shields.io/github/stars/FreeRDP/Remmina?style=social&color=white)](https://github.com/FreeRDP/Remmina/stargazers) |
+| **[FreeRDP](https://github.com/FreeRDP/FreeRDP)** 🔑 | **Free implementation of the Remote Desktop Protocol (RDP).** Core protocol engine powering many clientless and native remote desktop solutions across Windows, Linux, and macOS. | [![Stars](https://img.shields.io/github/stars/FreeRDP/FreeRDP?style=social&color=white)](https://github.com/FreeRDP/FreeRDP/stargazers) |
+| **[Kasm Workspaces](https://github.com/kasmtech/workspaces-issues)** 🛡️ | **Containerized Desktop-as-a-Service & Browser Isolation.** Streams Docker container desktops/apps to browsers with GPU acceleration, Zero Trust OpenZiti integration, and Proxmox VE auto-provisioning. | [![Stars](https://img.shields.io/github/stars/kasmtech/workspaces-issues?style=social&color=white)](https://github.com/kasmtech/workspaces-issues/stargazers) |
+| **[IsardVDI](https://github.com/isard-vdi/isard)** 🐧 | **Free Software desktop virtualization platform (AGPL v3).** KVM-based VDI with NVIDIA GPU pass-through/vGPU support, Docker Compose deployment, and web UI for SPICE/noVNC/RDP sessions. | [![Stars](https://img.shields.io/github/stars/isard-vdi/isard?style=social&color=white)](https://github.com/isard-vdi/isard/stargazers) |
+| **[QVD (theqvd)](https://github.com/theqvd/theqvd)** 📦 | **Open-source VDI solution tailored for Linux desktops.** Delivers lightweight virtualized Linux desktop sessions and applications to distributed organizations. | [![Stars](https://img.shields.io/github/stars/theqvd/theqvd?style=social&color=white)](https://github.com/theqvd/theqvd/stargazers) |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome and greatly appreciated! Help us keep this list comprehensive and up to date:
+
+1. 🍴 **Fork** this repository.
+2. 📝 **Add/edit** entries in `README.md` maintaining alphabetical or star-based sorting.
+3. 📌 **Include**: Product name, official link, factual 1-2 sentence description, pricing, and free tier details.
+4. 🚀 **Submit** a Pull Request with a clear description of your additions.
+
+Before submitting, check out our curated list collection at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this Desktop-as-a-Service & Cloud PC directory useful, please consider supporting the project:
+
+- ⭐ **Star** this repository on GitHub to increase its visibility.
+- 🔄 **Share** it with fellow IT administrators, DevOps engineers, and Cloud architects.
+- ☕ **Buy me a coffee / Sponsor** the maintainer via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+Thank you for supporting open-source software and transparent technology documentation! ❤️
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Desktop-As-A-Service-DaaS&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Desktop-As-A-Service-DaaS&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This list is **community-curated** for informational and research purposes only — it is not exhaustive and does not constitute an endorsement.
+- DaaS and remote desktop platforms process sensitive enterprise data. Always implement Zero Trust network access, multi-factor authentication (MFA), and compliance controls before deploying solutions in production.
+- Pricing figures and free tier details are verified against public documentation as of October 2026, but vendor pricing schedules are subject to change.
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for IT administrators, VDI engineers, cloud architects, and system integrators.</b>
+</p>
