@@ -55,7 +55,7 @@ Below is a comparison table of commercial DaaS platforms, sorted by **Company Si
 
 ## 🔓 Open-Source GitHub Projects
 
-The open-source DaaS and remote virtualization ecosystem is exceptionally mature and production-proven. Below are the top open-source projects, sorted by **GitHub Stars_Count** in descending order:
+The open-source DaaS and remote virtualization ecosystem is exceptionally mature and production-proven. Below are the top open-source projects, sorted by **GitHub_Stars_Count** in descending order:
 
 | Repo / Project | Description | GitHub_Stars 🔽 |
 |:---|:---|:---:|
