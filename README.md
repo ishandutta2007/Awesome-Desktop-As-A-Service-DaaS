@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Desktop-As-A-Service-DaaS?style=flat-square&color=blue" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -55,9 +55,9 @@ Below is a comparison table of commercial DaaS platforms, sorted by **Company Si
 
 ## 🔓 Open-Source GitHub Projects
 
-The open-source DaaS and remote virtualization ecosystem is exceptionally mature and production-proven. Below are the top open-source projects, sorted by **GitHub Star Count** in descending order:
+The open-source DaaS and remote virtualization ecosystem is exceptionally mature and production-proven. Below are the top open-source projects, sorted by **GitHub Stars_Count** in descending order:
 
-| Repo / Project | Description | GitHub Stars 🔽 |
+| Repo / Project | Description | GitHub_Stars 🔽 |
 |:---|:---|:---:|
 | **[RustDesk](https://github.com/rustdesk/rustdesk)** 🦀 | **Full-featured open-source remote control & desktop access platform.** Self-hosted with full data sovereignty. Supports Windows, macOS, Linux, iOS, Android, and Web. Features VP8/VP9/AV1 codecs, P2P connection with NaCl end-to-end encryption. | [![Stars](https://img.shields.io/github/stars/rustdesk/rustdesk?style=social&color=white)](https://github.com/rustdesk/rustdesk/stargazers) |
 | **[Apache Guacamole](https://github.com/apache/guacamole)** 🥑 | **De-facto clientless HTML5 remote desktop gateway.** Provides clientless access to RDP, VNC, and SSH protocols through any standard web browser—no client plugins required. | [![Stars](https://img.shields.io/github/stars/apache/guacamole?style=social&color=white)](https://github.com/apache/guacamole/stargazers) |
